@@ -80,7 +80,7 @@ def url_check():
         print(url, "returned ", status)
 
 
-number = 290
+number = 0
 
 while number <= args.sequence:
 
