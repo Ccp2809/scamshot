@@ -9,13 +9,6 @@ If the keyword is found, a match message will appear and a screenshot will be ta
 # Usage
 
 In the second version of shotscam.py you can iterate values not only at the end of the URL, but anywhere you want. The optional argument "-ext" for "extension" has been added.
-
-  _________.__            __   _________                      
- /   _____/|  |__   _____/  |_/   _____/ ____ _____    _____  
- \_____  \ |  |  \ /  _ \   __\_____  \_/ ___\ __  \  /     \ 
- /        \|   Y  (  <_> )  | /        \  \___/ __ \|  Y Y  \ 
-/_______  /|___|  /\____/|__|/_______  /\___  >____  /__|_|  /
-        \/      \/                   \/     \/     \/      \/
         
 usage: shotscam.py [-h] [-V] [--example] [--extension EXT] [--keyword KEYWORD]
                    [--width WIDTH] [--height HEIGHT] [--sequence SEQUENCE]
