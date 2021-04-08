@@ -8,18 +8,50 @@ If the keyword is found, a match message will appear and a screenshot will be ta
 
 # Usage
 
-shotscam.py [-h] [-V] [--example] [--keyword KEYWORD] [--width WIDTH]
-                   [--height HEIGHT] [--sequence SEQUENCE] [--url URL]
+In the second version of shotscam.py you can iterate values not only at the end of the URL, but anywhere you want. The optional argument "-ext" for "extension" has been added.
 
-"shotscam.py --help" will show you what the optional and required arguments are.
+  _________.__            __   _________                      
+ /   _____/|  |__   _____/  |_/   _____/ ____ _____    _____  
+ \_____  \ |  |  \ /  _ \   __\_____  \_/ ___\ __  \  /     \ 
+ /        \|   Y  (  <_> )  | /        \  \___/ __ \|  Y Y  \ 
+/_______  /|___|  /\____/|__|/_______  /\___  >____  /__|_|  /
+        \/      \/                   \/     \/     \/      \/
+        
+usage: shotscam.py [-h] [-V] [--example] [--extension EXT] [--keyword KEYWORD]
+                   [--width WIDTH] [--height HEIGHT] [--sequence SEQUENCE]
+                   [--url URL]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -V, --version         show program version
+  --example, -e         show a brief explanation
+  --extension EXT, -ext EXT
+                        set the extension
+
+Required arguments:
+  --keyword KEYWORD, -k KEYWORD
+                        set keyword to look for in the URL source code
+  --width WIDTH, -w WIDTH
+                        set output width
+  --height HEIGHT, -hg HEIGHT
+                        set output height
+  --sequence SEQUENCE, -s SEQUENCE
+                        set output sequence
+  --url URL, -u URL     set target URL
+
   
 # Usage example
-  
-python shotscam.py -k JustEat -w 1920 -hg 1080 -s 292 -u "https://www.example.com/anything.ch?source="
+
+If you want to iterate the values at the end of the URL, the following command should be taken as an example:
+
+python shotscam.py -k JustEat -w 1920 -hg 1080 -s 292 -u "https://www.example.com/anything.ch?source=" -ext ""
+
+If, on the other hand, you want to iterate in a URL parameter/path that is somewhere in the middle of the URL, the following kind of command should be used:
+
+python shotscam.py -k JustEat -w 1920 -hg 1080 -s 292 -u "https://www.example.com/anything.ch?source=" -ext "/rest/of/the/url"
   
 The order of the values as well as using double quotes is important, otherwise Python will complain.
   
-# Limitations
+# Future implementations
   
-Right now the script only works with URLs that have the numeric value over which the tool will iterate at the end of the URL. I am currently working on
-making this feature more flexible as well as on including proxy capabilities.
+The intention is to add proxy and user-agent features as soon as possible.
