@@ -26,7 +26,7 @@ requiredArguments.add_argument("--height", "-hg", help="set output height", type
 requiredArguments.add_argument("--sequence", "-s", help="set output sequence", type=int)
 requiredArguments.add_argument("--url", "-u", help="set target URL", type=str)
 
-args = parser.parse_args()  # Reads arguments from the command line
+args = parser.parse_args()
 
 if args.version:
     print("v2")
