@@ -46,7 +46,6 @@ else:
     print("Invalid argument. Use --help or -h to see the valid options")
     exit(2)
 
-#base_url = 'https://www.vouchersaddict.com/cgi-bin/wingame.pl?source_pk=5617&partner_pk=312&wingame_pk=66&freetest_pk='
 current_date = datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
 screenshot_extension = ".png"
 
